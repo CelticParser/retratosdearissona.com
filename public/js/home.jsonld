@@ -1,0 +1,98 @@
+
+
+{
+	"@context": "https://schema.org",
+	"@graph": [{
+			"@type": "Organization",
+			"@id": "https://retratosdearizona.com/#organization",
+			"name": "Retratos de Arissona",
+			"legalName": "Retratos de Arissona, PBC",
+			"description": "Curator to narratives of Arizona's colorful history, fascinating culture & endless adventure exclusively displayed with beautiful imagery & captivating videos.",
+			"url": "https://retratosdearizona.com",
+			"sameAs": [
+				"https://www.instagram.com/jason.robert.okennedy/"
+			],
+			"logo": {
+				"@type": "ImageObject",
+				"@id": "https://retratosdearizona.com/#logo",
+				"url": "https://retratosdearizona.com#logo",
+				"contentUrl": "https://retratosdearissona.com/RdA_Motif-256x.svg",
+				"width": 256,
+				"height": 256,
+				"caption": "Retratos de Arissona Logo"
+			},
+			"image": {
+				"@id": "https://retratosdearizona.com/#logo"
+			},
+			"founder": {
+				"@type": "Person",
+				"@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+				"sameAs": [
+					"https://www.instagram.com/jason.robert.okennedy/"
+				]
+			},
+			"email": "go.adventure@Retratos de Arissona.org",
+			"slogan": "Once Seen, Forever Retratos de Arissona.",
+			"foundingDate": "2021-05-25"
+		}, {
+			"@type": "WebSite",
+			"@id": "https://retratosdearizona.com/#website",
+			"url": "https://retratosdearizona.com",
+			"name": "Retratos de Arissona",
+			"description": "An artistic view of Arizona's people, places, wildlife, and things that make it unique while connecting with its forgotten history to current events for educating history & conservation.",
+			"publisher": {
+				"@id": "https://retratosdearizona.com/#organization"
+			},
+			"copyrightHolder": {
+				"@id": "https://retratosdearizona.com/#organization"
+			},
+			"inLanguage": "en-US"
+		}, {
+			"@type": "WebPage",
+			"@id": "https://retratosdearizona.com/#webpage",
+			"url": "https://retratosdearizona.com/",
+			"name": "Retratos de Arissona",
+			"description": "Coming Soon",
+			"isPartOf": {
+				"@id": "https://retratosdearizona.com/#website"
+			},
+			"datePublished": "2022-08-17T04:26:00-07:00",
+			"potentialAction": [{
+				"@type": "ReadAction",
+				"target": "https://retratosdearizona.com#theArticle"
+			}],
+			"inLanguage": "en-US"
+		}, {
+			"@type": "ImageObject",
+			"@id": "https://retratosdearizona.com/#primaryimage",
+			"url": "https://retratosdearizona.com/#featured-image",
+			"contentUrl": "https://retratosdearizona.com/img/Winded-at-Seven-Sacred-Pools.jpg",
+			"width": 1934,
+			"height": 3000,
+			"name": "Winded at Seven Sacred Pools",
+			"datePublished": "2022-08-17",
+			"creator": {
+				"@type": "Person",
+				"@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+				"name": "Jason Robert O'Kennedy",
+				"sameAs": [
+					"https://www.instagram.com/jason.robert.okennedy/"
+				]
+			},
+			"license": "https://retratosdearissona.com/about/licensing",
+			"acquireLicensePage": "https://retratosdearissona.com/about/licensing",
+			"copyrightYear": "2022",
+			"copyrightHolder": {
+				"@type": "Person",
+				"@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+				"name": "Jason Robert O'Kennedy",
+				"sameAs": [
+					"https://www.instagram.com/jason.robert.okennedy/"
+				]
+			},
+			"inLanguage": "en-US"
+		}
+
+	]
+}
+

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="max-image-preview:large">
+
+    <title>Retratos de Arissona</title>
+    <meta name=description
+        content="An artistic view of Arizona's people, places, wildlife, and things that make it unique while connecting with its forgotten history for education & historical conservation.">
+    <meta name="author" content="Jason Robert O'Kennedy">
+
+    <!-- Fonts 
+        //TODO: [Optimization]
+        SEE: https://gomakethings.com/a-modern-font-loading-strategy-with-the-vanilla-js-fontfaceset.load-method/
+        SEE: https://deploy-preview-15--upbeat-shirley-608546.netlify.app/perfect-ish-font-fallback/?font=Raleway 
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet">
+
+    <!-- Above-The-Fold Styling 
+        SEE: https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent 
+    -->
+    <style>
+        *{box-sizing:border-box;}
+        a[href^="https://www.instagram.com"]::after{display: none !important;}
+        .fade-in-image { animation: fadeIn 5s; }
+        .material-symbols-sharp{margin:12px 0 0 -10px;font-variation-settings:FILL 0,wght 100,GRAD 0,opsz 40}
+        figure{margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0;margin-inline-end: 0;}
+        li>section>h2{text-align:center}
+        li.ol-preview{list-style-type:none}
+        main{margin:0em 1em 1em 1em}
+        .nav{height:50px;width:100%;position:relative}
+        .nav>.nav-header{display:inline;margin-top:10}
+        .nav>.nav-header>.nav-title{display:inline-block;font-size:22px;font-weight: 100;color:#393838;padding:10px 10px 11px 10px;text-align:center}
+        .nav>.nav-btn{display:none}
+        .nav>.nav-links{display:inline;float:right;font-size:18px}
+        .nav>.nav-links>a{display:inline-block;padding:16px 10px 16px 10px;font-weight: 100;text-decoration:none;text-align:center;color:#393838}
+        .nav>#nav-check{display:none}
+        .ol-discription{text-align:justify}
+        .page-title{text-align:center;font-size:1.5em;font-style:italic;margin:0 2em 0 2em}
+        .sub-title{font-size:.75em;line-height:3em}
+        @media (max-width:600px){
+            .page-title{text-align:center;font-style:italic;margin:0 1em 0 1em}
+            .nav>.nav-btn{display:inline-block;position:absolute;right:0;top:0}
+            .nav>.nav-btn>label{display:inline-block;width:50px;height:50px;padding:13px}
+            .nav>.nav-btn>label>span{display:block;width:25px;height:10px;border-top:2px solid #393838}
+            .nav>.nav-links{position:absolute;display:block;width:100%;height:0;transition:all .3s ease-in;overflow-y:hidden;top:50px;left:0}
+            .nav>.nav-links>a{display:block;width:100%;padding:38px 10px 38px 10px;}
+            .nav>#nav-check:not(:checked)~.nav-links{height:0}
+            .nav>#nav-check:checked~.nav-links{height:calc(100vh - 50px);overflow-y:auto;background-color:rgba(255,255,255,.955)}
+            }
+    </style>
+
+    <!-- Site-wide Styles -->
+    <link rel="stylesheet" href="css/skeleton-flexbox.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Web and Application Icons 
+        SEE: https://realfavicongenerator.net/ 
+    -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a52e53">
+    <meta name="apple-mobile-web-app-title" content="Retratos de Arissona">
+    <meta name="application-name" content="Retratos de Arissona">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- og:website properties 
+        https://ogp.me/#intro 
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Coming Soon: Retratos de Arissona">
+    <meta property="og:site_name" content="Retratos de Arissona" />
+    <meta property="og:url" content="https://retratosdearissona.com">
+    <!-- og:image structured properties -->
+    <meta property="og:image" content="https://ik.imagekit.io/retratosdearissona/tr:w-720/img/Winded-at-Seven-Sacred-Pools.jpg">
+    <meta property="og:image:secure_url" content="https://ik.imagekit.io/retratosdearissona/tr:w-720/img/Winded-at-Seven-Sacred-Pools.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="720" />
+    <meta property="og:image:height" content="1083" />
+    <meta property="og:image:alt" content="A piníon worn by the wind at Soldiers Pass, Sedona, Arizona." />
+
+    <link rel=manifest href=/site.webmanifest.json>
+
+    <!-- json-ld 
+        Open this node and study it! It is the most important element for SEO and no web templating service does this for you.
+        SEE: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data 
+        //TODO: Create licensing email account and page
+    -->
+    <script type="application/ld+json"> {
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "Organization",
+                    "@id": "https://retratosdearizona.com/#organization",
+                    "name": "Retratos de Arissona",
+                    "legalName": "Retratos de Arissona, PBC",
+                    "description": "Curator to narratives of Arizona's colorful history, fascinating culture & endless adventure exclusively displayed with beautiful imagery & captivating videos.",
+                    "url": "https://retratosdearizona.com",
+                    "sameAs": [
+                        "https://www.instagram.com/jason.robert.okennedy/"
+                    ],
+                    "logo": {
+                        "@type": "ImageObject",
+                        "@id": "https://retratosdearizona.com/#logo",
+                        "url": "https://retratosdearizona.com#logo",
+                        "contentUrl": "https://retratosdearissona.com/img/svg/</b>_Motif-256px.svg",
+                        "width": 256,
+                        "height": 256,
+                        "caption": "Retratos de Arissona Logo"
+                    },
+                    "image": {
+                        "@id": "https://retratosdearizona.com/#logo"
+                    },
+                    "founder": {
+                        "@type": "Person",
+                        "@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+                        "sameAs": [
+                            "https://www.instagram.com/jason.robert.okennedy/"
+                        ]
+                    },
+                    "email": "licensing@RetratosdeArissona.com",
+                    "slogan": "Once Seen, Forever Retratos de Arissona.",
+                    "foundingDate": "2021-05-25"
+                }, {
+                    "@type": "WebSite",
+                    "@id": "https://retratosdearizona.com/#website",
+                    "url": "https://retratosdearizona.com",
+                    "name": "Retratos de Arissona",
+                    "description": "An artistic view of Arizona's people, places, wildlife, and things that make it unique while connecting with its forgotten history to current events for educating history & conservation.",
+                    "publisher": {
+                        "@id": "https://retratosdearizona.com/#organization"
+                    },
+                    "copyrightHolder": {
+                        "@id": "https://retratosdearizona.com/#organization"
+                    },
+                    "inLanguage": "en-US"
+                }, {
+                    "@type": "WebPage",
+                    "@id": "https://retratosdearizona.com/#webpage",
+                    "url": "https://retratosdearizona.com/",
+                    "name": "Retratos de Arissona",
+                    "description": "Coming Soon",
+                    "isPartOf": {
+                        "@id": "https://retratosdearizona.com/#website"
+                    },
+                    "datePublished": "2022-08-17T04:26:00-07:00",
+                    "potentialAction": [{
+                        "@type": "ReadAction",
+                        "target": "https://retratosdearizona.com#theArticle"
+                    }],
+                    "inLanguage": "en-US"
+                }, {
+                    "@type": "ImageObject",
+                    "@id": "https://retratosdearizona.com/#primaryimage",
+                    "url": "https://retratosdearizona.com/#featured-image",
+                    "contentUrl": "https://ik.imagekit.io/retratosdearissona/img/Winded-at-Seven-Sacred-Pools.jpg",
+                    "width": 1934,
+                    "height": 3000,
+                    "name": "Winded at Soldiers Pass",
+                    "datePublished": "2022-08-17",
+                    "creator": {
+                        "@type": "Person",
+                        "@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+                        "name": "Jason Robert O'Kennedy",
+                        "sameAs": [
+                            "https://www.instagram.com/jason.robert.okennedy/"
+                        ]
+                    },
+                    "license": "https://retratosdearissona.com/about/licensing",
+                    "acquireLicensePage": "https://retratosdearissona.com/about/licensing",
+                    "copyrightYear": "2022",
+                    "copyrightHolder": {
+                        "@type": "Person",
+                        "@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+                        "name": "Jason Robert O'Kennedy",
+                        "email": "jason.robert.okennedy@gmail.com",
+                        "sameAs": [
+                            "https://www.instagram.com/jason.robert.okennedy/"
+                        ]
+                    },
+                    "inLanguage": "en-US"
+                }
+        
+            ]
+        }
+    </script>
+
+    <!-- Google Tag Manager
+        ==================== -->
+
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W4K8M42');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body oncontextmenu="return false;">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4K8M42"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation bar -->
+    <header class="header" id="top">
+
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+
+            <img src="img/svg/RdA_Motif-256x.svg" alt="" style="background-size: 20%; margin: 10px; float:left">
+
+            <div class="nav-header">
+                <div class="nav-title">
+                    Retratos de Arissona
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            
+            <!-- //TODO: Create OnClick event for MailChimp Popup function -->
+            <div class="nav-links">
+                <a onclick="myFunction()">Prints</a>
+                <a href="#">Articles</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+				<a href="https://www.instagram.com/jason.robert.okennedy/" target="_blank">
+					<svg style="margin: -2px 10px -2px -2px;" fill="grey" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+				</a>
+				
+            </div>
+						
+        </div>
+    </header>
+
+    <main>
+
+        <hr style="margin-top: 10px;">
+
+        <h2 class="row middle-xs center-xs">Coming Soon</h2>
+        <h2 class="page-title">
+            A portraiture of Arizonas&apos; people, places, wildlife, and things <br>that make it unique.
+            <br>
+            <!-- You have an apostrophe in your name Kelly! Time to start getting in good habits by using the unicode in HTML (more for security reasons) 
+                SEE: https://medium.com/@eokinch/unicode-characters-in-html-css-a55c77fd3570#:~:text=For%20those%20who%20don't,cuts%20down%20on%20load%20time. 
+            -->
+            <span class="sub-title">by photographer Jason Robert O&apos;Kennedy</span>
+        </h2>
+
+        <hr>
+
+        <section style="padding-top: 3em;">
+            <ol>
+                <li class="row  center-xs ol-preview"
+                    role="article">
+                    <figure class="col-xs-12
+                        col-sm-8
+                        col-md-4
+                        col-lg-4"
+                            style="aspect-ratio: 1217.32/1832.08; width: 100%; object-fit: contain" > <!-- NOTE: Use 12 8 7 7 for landscape & 12 8 6 6 for Portrait -->
+                        <picture>
+                            <!-- Im using imageKit.io for an image CDN delivery network -- its just easier this way LOL I can esplain more l8r -->
+                            <source media="(min-width: 75em)"
+                                data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-1400,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
+                            <source media="(min-width: 64em)"
+                                data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-1200,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
+                            <source media="(min-width: 48em)"
+                                data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-1000,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
+                            <source media="(min-width: 34em)"
+                                data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-720,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
+                            <source media="(max-width: 28em)"
+                                data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-520,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
+                            <img data-src="https://ik.imagekit.io/retratosdearissona/img/Winded-at-Seven-Sacred-Pools.jpg"
+                                alt="All the dinosaurs!" class="u-max-full-width lazy">
+                        </picture>
+
+                        <!-- For good UX (User-Experience, its a good idea to let your audience know whenever a link opens a new tab or links to another webpage using an icon after the link. Here, I like to open a new tab to the page link for purchasing a print
+                        SEE: https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/ -->
+                        <figcaption style="font-size: .6em;margin: 0 0.4em 2em 0.4em;">
+                            <a href="https://TODO: Create_and_Link_to_print_page_for_this_image" style="font-style: italic;font-weight: bold;" target="_blank">Winded Pinìon at Soldiers Pass:</a> Pinyon pine is widely distributed pine that grows in the Intermountain region of Arizona. Growth is very slow and trees with diameters of 4 to 6 inches can be several hundred years old.
+                        </figcaption>
+
+                    </figure>
+
+                    <br>
+
+                    <section class="col-xs-12
+                        col-sm-12
+                        col-md-8
+                        col-lg-8">
+                        
+                            <h2 style="text-align: center;">
+                                Arissona
+                            </h2>
+                            <p style="text-align: justify; text-justify: auto; padding: 1em;">
+                                The area that is now southern Arizona & northern Mexico was known by the Spanish as the Pimería Alta, or Upper Pima Country, named after the natives of the area whom the Spanish called Pima.
+                                <!-- //TODO: using <br> to separate paragraphs is a BAD practice -- I only us it when I am desinging and I will correct it later LOL -->
+                                <br><br> 
+                                In 1737, a report by the Spanish/Basque Explorer, Captain Juan Bautista de Anza (father of the Anza Trail) mentioned that a slab of silver weighing more than 2,500 pounds was discovered in Pimería Alta, <q>"…between the Guevavi Mission and the ranchería called Arissona (entre: la Miss.n de Guebabi, y la ranchería del Arissona<a href="#ref01" style="text-decoration: none;font-weight: bolder;">&nbsp;¹&nbsp;</a>)."</q>
+                                <br><br>
+                                Shortly prior to the discovery between 1734 and 1736, Bernardo de Urrea, a native Mexican of Basque heritage, the Governor and Captain General of the Provinces of Sonora and Sinaloa, established the ranchería, south of the present-day international border in México — about forty miles southwest of Tumacácori . He named it Ranchería de Arissona (Baq.Eus. Ranch of “the Good Oak Tree”).
+                                <br><br>
+                                Because of fascination and romance of silver, the ranchería soon quickly became a place of note attracting Europeans to colonize the area. Upon arrival to the region, eager would-be miners would ask the locals, “where are the planchas de plata” (Sp. silver plates) — a common response was to point and reply, “…north of the ranchería, Arissona.”
+                                <br><br>
+                                Quickly, Arizona, a corruption of the Basque word Arissona, became synonymous with the region for it's bountiful silver bolas y planchas (Sp. balls & plates).
+                                <br><br>
+                                <b>Arizona Today</b>
+                                is known for its desert climate, with very hot summers and mild winters. But most are unaware to how much more Arizona has to offer; Northern Arizona features forests of Ponderosa Pine — the largest single-stand in the world, Douglas fir, spruce trees, and Aspen brought by German settlers; the Colorado Plateau; mountain ranges (such as the San Francisco Mountains, Arizona’s highest); as well as large, deep canyons, with much more moderate summer temperatures and significant winter snowfalls. There are ski resorts in the areas of Flagstaff, Alpine, and Tucson. In addition to the internationally known Grand Canyon National Park, which is one of the world's seven natural wonders, there are six national forests — Tonto N.F., the country’s largest, three national parks, and twenty-two national monuments — the most in the U.S.
+                            </p>
+
+                            <p style="text-align: left; text-justify: auto; padding: 1em;"">
+                                <b>REFERENCES:</b>
+                                <br>
+                                <b id="ref01">[1]:</b> Garate, Donald T. <cite>"Arizona-Never Arizonac"</cite>
+                            </p>
+                        
+                    </section>
+
+                </li>
+
+            </ol>           
+
+        </section>
+
+        <!-- //TODO: Stylize the icon -->
+        <div class="back-to-top-wrapper">
+            <a href="#top" class="back-to-top-link" aria-label="Scroll to Top">🔝</a>
+        </div>
+
+    </main>
+
+    <hr>
+
+    <footer class="row center-xs center-sm" style="margin-top: 3em;">
+
+        <p class="col-xs-12" style="font-weight: 100;">© 2022 Retratos de Arissona | <a href="https://www.instagram.com/jason.robert.okennedy/" target="_blank" style="text-decoration:none;">Jason Robert O'Kennedy 
+            <svg style="margin: -2px 0 -2px 2px;" fill="grey" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a></p>
+        <p class="col-xs-12" style="font-weight: 100;">All Rights Reserved</p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.2/dist/lazyload.min.js"></script>
+
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            // TODO: custom settings go here
+        });
+    </script>
+
+    <!-- I use Googles FireBase Web Hosting. Since the hits are low, it's basically free and probably the most reliable solution out there
+        SEE: https://firebase.google.com/products/hosting 
+    -->
+    <script type="module">
+        // Import ONLY! the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDKYEo7zuXZ0gsgWgOMTxkfuwvfVh3NgjU",
+            authDomain: "retratos-de-arissona.firebaseapp.com",
+            projectId: "retratos-de-arissona",
+            storageBucket: "retratos-de-arissona.appspot.com",
+            messagingSenderId: "899650162301",
+            appId: "1:899650162301:web:bb42dee003816e5be06b14",
+            measurementId: "G-QZ8QFEY0S4"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <!-- MailChimp Signup popup function -->
+    <script 
+    id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9c1837d46572784276a78ffce/8e4c47005fe4b8e1dc2a30ed0.js");</script>
+
+</body>
+
+</html>

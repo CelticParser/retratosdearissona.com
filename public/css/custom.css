@@ -1,0 +1,91 @@
+a[href^="http"]::after,
+a[href^="https://"]::after
+{
+  content: "";
+  width: 11px;
+  height: 11px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+figcaption a[href^="http"]::after,
+figcaption a[href^="http"]::after,
+ a[href^="https://"]::after
+{
+  width: 8px;
+  height: 8px;
+  margin-left: 2px;
+
+}
+
+footer>p.col-xs-12:first-child {
+    margin-bottom: 0;
+}
+
+.refs {
+  font-weight: 100;
+  /* float: left; */
+}
+
+/* Lazyload Fad-In
+    ============== */
+img.lazy {
+    opacity: 0;
+}
+
+img:not(.initial) {
+    transition: opacity 1s;
+}
+
+img.initial,
+img.loaded,
+img.error {
+    opacity: 1;
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+/* =================== */
+
+/* Back to top Scroll 
+    ================= */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.back-to-top-wrapper {
+    position: absolute;
+    top: 100vh;
+    right: 0.25rem;
+    bottom: -5em;
+    width: 3em;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  .back-to-top-wrapper:hover {
+    opacity: 1;
+  }
+
+.back-to-top-link {
+    position: fixed;
+    pointer-events: all;
+    top: calc(100vh - 5rem);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    /* border-radius: 50%; */
+    padding: 0.25rem;
+    transition: transform 80ms ease-in;
+  }
