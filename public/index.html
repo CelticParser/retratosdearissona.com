@@ -98,103 +98,228 @@
         SEE: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data 
         //TODO: Create licensing email account and page
     -->
-    <script type="application/ld+json"> {
-            "@context": "https://schema.org",
-            "@graph": [{
-                    "@type": "Organization",
-                    "@id": "https://retratosdearizona.com/#organization",
-                    "name": "Retratos de Arissona",
-                    "legalName": "Retratos de Arissona, PBC",
-                    "description": "Curator to narratives of Arizona's colorful history, fascinating culture & endless adventure exclusively displayed with beautiful imagery & captivating videos.",
-                    "url": "https://retratosdearizona.com",
-                    "sameAs": [
-                        "https://www.instagram.com/jason.robert.okennedy/",
-                        "https://www.pinterest.com/jasonrobertokennedy/"
-                    ],
-                    "logo": {
-                        "@type": "ImageObject",
-                        "@id": "https://retratosdearizona.com/#logo",
-                        "url": "https://retratosdearizona.com#logo",
-                        "contentUrl": "https://retratosdearissona.com/img/svg/</b>_Motif-256px.svg",
-                        "width": 256,
-                        "height": 256,
-                        "caption": "Retratos de Arissona Logo"
-                    },
-                    "image": {
-                        "@id": "https://retratosdearizona.com/#logo"
-                    },
-                    "founder": {
-                        "@type": "Person",
-                        "@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
-                        "sameAs": [
-                            "https://www.instagram.com/jason.robert.okennedy/",
-                            "https://www.pinterest.com/jasonrobertokennedy/",
-                            "https://vero.co/jasonrobertokennedy/"
-                        ]
-                    },
-                    "email": "licensing@RetratosdeArissona.com",
-                    "slogan": "Once Seen, Forever Retratos de Arissona.",
-                    "foundingDate": "2021-05-25"
-                }, {
-                    "@type": "WebSite",
-                    "@id": "https://retratosdearizona.com/#website",
-                    "url": "https://retratosdearizona.com",
-                    "name": "Retratos de Arissona",
-                    "description": "An artistic view of Arizona's people, places, wildlife, and things that make it unique while connecting with its forgotten history to current events for educating history & conservation.",
-                    "publisher": {
-                        "@id": "https://retratosdearizona.com/#organization"
-                    },
-                    "copyrightHolder": {
-                        "@id": "https://retratosdearizona.com/#organization"
-                    },
-                    "inLanguage": "en-US"
-                }, {
-                    "@type": "WebPage",
-                    "@id": "https://retratosdearizona.com/#webpage",
-                    "url": "https://retratosdearizona.com/",
-                    "name": "Retratos de Arissona",
-                    "description": "Coming Soon",
-                    "isPartOf": {
-                        "@id": "https://retratosdearizona.com/#website"
-                    },
-                    "datePublished": "2022-08-17T04:26:00-07:00",
-                    "potentialAction": [{
-                        "@type": "ReadAction",
-                        "target": "https://retratosdearizona.com#theArticle"
-                    }],
-                    "inLanguage": "en-US"
-                }, {
-                    "@type": "ImageObject",
-                    "@id": "https://retratosdearizona.com/#primaryimage",
-                    "url": "https://retratosdearizona.com/#featured-image",
-                    "contentUrl": "https://ik.imagekit.io/retratosdearissona/img/Winded-at-Seven-Sacred-Pools.jpg",
-                    "width": 1934,
-                    "height": 3000,
-                    "name": "Winded at Soldiers Pass",
-                    "datePublished": "2022-08-17",
-                    "creator": {
-                        "@type": "Person",
-                        "@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
-                        "name": "Jason Robert O'Kennedy",
-                        "sameAs": [
-                            "https://www.instagram.com/jason.robert.okennedy/"
-                        ]
-                    },
-                    "license": "https://retratosdearissona.com/about/licensing",
-                    "acquireLicensePage": "https://retratosdearissona.com/about/licensing",
-                    "copyrightYear": "2022",
-                    "copyrightHolder": {
-                        "@type": "Person",
-                        "@id": "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
-                        "name": "Jason Robert O'Kennedy",
-                        "email": "jason.robert.okennedy@gmail.com",
-                        "sameAs": [
-                            "https://www.instagram.com/jason.robert.okennedy/"
-                        ]
-                    },
-                    "inLanguage": "en-US"
-                }
-        
+    <script type="application/ld+json">
+        {
+            "@context"  : "https://schema.org/",
+            "@type"     : "WebPage",
+            "@id"       : "https://retratosdearizona.com#homepage",
+            "url"       : "https://retratosdearizona.com/",
+            "name"      : "Retratos de Arissona",
+            "description": "Coming Soon | A portraiture of Arizona its people, places, wildlife, and things that make it unique by photographer Jason Robert O'Kennedy",
+            "image": [
+                {
+                    "@type" : "ImageObject",
+                    "@id"   : "https://retratosdearissona.com#windedpinionatsoldierspass"
+                },
+                {
+                    "@type" : "ImageObject",
+                    "@id"   : "https://retratosdearissona.com#fallofadreamer"
+                   }
+            ],
+            "isPartOf": {
+                "@id": "https://retratosdearizona.com#website"
+            },
+            "datePublished"  : "2022-08-17T04:26:00-07:00",
+            "potentialAction": [{
+                "@type" : "ReadAction",
+                "target": "https://retratosdearizona.com#theArticle"
+            }],
+            "primaryImageOfPage": [{
+                "@type" : "ImageObject",
+                "@id"   : "https://retratosdearissona.com#windedpinionatsoldierspass"
+            }]
+        }
+    </script>
+    
+    <script type="application/ld+json">
+        {
+            "@context"      : "https://schema.org/",
+            "@type"         : "WebSite",
+            "@id"           : "https://retratosdearizona.com#website",
+            "url"           : "https://retratosdearizona.com",
+            "name"          : "Retratos de Arissona",
+            "description"   : "An artistic view of Arizona's people, places, wildlife, and things that make it unique while connecting with its forgotten history to current events for educating history & conservation.",
+            "publisher": {
+                "@id": "https://retratosdearizona.com#organization"
+            },
+            "copyrightHolder": {
+                "@id": "https://retratosdearizona.com#organization"
+            },
+            "inLanguage": "en-US"
+        }
+    </script>
+    
+    <script type="application/ld+json">
+        {
+            "@context"      : "https://schema.org/",
+            "@type"         : "Organization",
+            "@id"           : "https://retratosdearizona.com#organization",
+            "name"          : "Retratos de Arissona",
+            "legalName"     : "Retratos de Arissona, PBC",
+            "description"   : "Curator to narratives of Arizona's colorful history, fascinating culture & endless adventure exclusively displayed with beautiful imagery & captivating videos.",
+            "url"           : "https://retratosdearizona.com",
+            "logo": {
+                "@type"     : "ImageObject",
+                "@id"       : "https://retratosdearizona.com#logo",
+                "url"       : "https://retratosdearizona.com#logo",
+                "contentUrl": "https://retratosdearissona.com/img/svg/Motif-256px.svg",
+                "width"     : 256,
+                "height"    : 256,
+                "caption"   : "Retratos de Arissona Logo"
+            },
+            "image": {
+                "@id": "https://retratosdearizona.com#logo"
+            },
+            "founder": {
+                "@type" : "Person",
+                "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+            },
+            "email"         : "licensing@RetratosdeArissona.com",
+            "foundingDate"  : "2022-05-25"
+        }
+    </script>
+    
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type"   : "CreativeWork",
+          "@id"     : "https://retratosdearissona.com#windedpinyonatsoldierspass",
+          "audience": "Art Collector",
+          "creator": {
+            "@type" : "Person",
+            "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+          },
+          "image": [{
+            "@type" : "Photograph",
+            "@id"   : "https://retratosdearissona.com#windedpinionatsoldierspass"
+          }],
+          "mainEntityOfPage": "https://retratosdearizona.com",
+          "isFamilyFriendly": true
+        }
+    </script>
+    
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type"   : "CreativeWork",
+          "@id"     : "https://retratosdearissona.com#fallofadreamer",
+          "audience": "Art Collector",
+          "creator": {
+            "@type" : "Person",
+            "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+          },
+          "image": [{
+            "@type" : "Photograph",
+            "@id"   : "https://retratosdearissona.com#fallofadreamer"
+          }],
+          "mainEntityOfPage": "https://retratosdearizona.com",
+          "isFamilyFriendly": true
+        }
+    </script>
+    
+    <script type="application/ld+json">
+        {
+            "@context"          : "https://schema.org/",
+            "@type"             : "ImageObject",
+            "@id"               : "https://retratosdearissona.com#windedpinionatsoldierspass",
+            "abstract"          : "A pinyon tree worn by the wind at Soldiers Pass, Sedona, Arizona",
+            "acquireLicensePage": "https://retratosdearissona.com/about/licensing",
+            "awards": [
+              "[_ENTER_AN_AWARD_]",
+              "[_ENTER_AN_AWARD_No2_]"
+            ],
+            "contentLocation": {
+              "@type"   : "Place",
+              "name"    : "Soldiers Pass, Sedona, Arizona, USA"
+            },
+            "contentUrl": "https://ik.imagekit.io/retratosdearissona/tr:w-2800,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
+            "copyrightHolder": {
+                "@type" : "Person",
+                "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+            },
+            "copyrightNotice"   : "©2022 No reproduction rights are granted without the express written permission of Jason Robert O'Kennedy - All Rights Reserved",
+            "copyrightYear"     : "2022",
+            "creator": {
+                "@type" : "Person",
+                "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+            },
+            "dateCreated"   : "2022-06-20",
+            "datePublished" : "2022-08-16",
+            "description"   : "An artistic black and white photo of a Pinyon tree set in Coconino Sandstone worn by wind near Soldiers Pass Sedona Arizona",
+            "discussionUrl" : "https://www.instagram.com/p/CfFkNKEs0Vf/",
+            "genre": [
+                "photography",
+                "black and white"
+            ],
+            "image": [
+                "https://ik.imagekit.io/retratosdearissona/tr:w-2800,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
+                "https://ik.imagekit.io/retratosdearissona/tr:ar-1-1,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
+                "https://ik.imagekit.io/retratosdearissona/tr:ar-4-3,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
+                "https://ik.imagekit.io/retratosdearissona/tr:ar-16-9,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg"
+            ],
+            "license"           : "https://retratosdearissona.com/about/licensing",
+            "mainEntityOfPage"  : "https://retratosdearizona.com/",
+            "name"              : "Winded Pinyon at Soldiers Pass",
+            "sameAs"            : "https://www.instagram.com/p/CfFkNKEs0Vf/"
+        }
+        </script>
+    <script type="application/ld+json">
+            {
+                "@context"          : "https://schema.org/",
+                "@type"             : "ImageObject",
+                "@id"               : "https://retratosdearissona.com#fallofadreamer",
+                "abstract"          : "Cibeque Falls, Cibeque Creek, Arizona",
+                "acquireLicensePage": "https://retratosdearissona.com/about/licensing",
+                "awards": [
+                    "[_ENTER_AN_AWARD_]",
+                    "[_ENTER_AN_AWARD_No2_]"
+                ],
+                "contentLocation": {
+                    "@type" : "Place",
+                    "name"  : "Cibeque Creek, Arizona, USA"
+                },
+                "contentUrl": "https://ik.imagekit.io/retratosdearissona/tr:w-2800,e-usm-2-2-0.8-0.024/img/fall-of-a-dreamer.jpg",
+                "copyrightHolder": {
+                    "@type" : "Person",
+                    "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+                },
+                "copyrightNotice": "©2022 No reproduction rights are granted without the express written permission of Jason Robert O'Kennedy - All Rights Reserved",
+                "copyrightYear": "2022",
+                "creator": {
+                    "@type" : "Person",
+                    "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+                },
+                "dateCreated"   : "2022-02-22",
+                "datePublished" : "2022-08-16",
+                "description"   : "An artistic black and white photo of a waterfall in the White Mountain Apache Community at Cibeque Falls Cibeque Arizona",
+                "discussionUrl" : "https://www.instagram.com/p/CczVEZ4gngU/",
+                "genre": [
+                    "photography",
+                    "black and white"
+                ],
+                "image": [
+                    "https://ik.imagekit.io/retratosdearissona/tr:w-2800,e-usm-2-2-0.8-0.024/img/fall-of-a-dreamers.jpg",
+                    "https://ik.imagekit.io/retratosdearissona/tr:ar-1-1,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/fall-of-a-dreamers.jpg",
+                    "https://ik.imagekit.io/retratosdearissona/tr:ar-4-3,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/fall-of-a-dreamers.jpg",
+                    "https://ik.imagekit.io/retratosdearissona/tr:ar-16-9,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/fall-of-a-dreamers.jpg"
+                ],
+                "license"           : "https://retratosdearissona.com/about/licensing",
+                "mainEntityOfPage"  : "https://retratosdearizona.com/articles/fall-of-a-dreamer/",
+                "name"              : "Fall of a Dreamer",
+                "keywords"          : "fall-of-a-dreamer, waterfall, arizona, black and white, apache, cibeque, white mountains, salt river",
+                "sameAs"            : "https://www.instagram.com/p/CczVEZ4gngU/",
+                "thumbnailUrl"      : "https://ik.imagekit.io/retratosdearissona/tr:w-100,h-100,e-usm-2-2-0.8-0.024/img/fall-of-a-dreamers.jpg"
+            }
+            </script>
+    <script type="application/ld+json">
+        {
+            "@type" : "Person",
+            "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+            "name"  : "Jason Robert O'Kennedy",
+            "sameAs": [
+                "https://www.instagram.com/jason.robert.okennedy/",
+                "https://www.pinterest.com/jasonrobertokennedy/",
+                "https://vero.co/jasonrobertokennedy"
             ]
         }
     </script>
@@ -226,7 +351,7 @@
         <div class="nav">
             <input type="checkbox" id="nav-check">
 
-            <img src="img/svg/RdA_Motif-256x.svg" alt="" style="background-size: 20%; margin: 10px; float:left">
+            <img id="logo" src="img/svg/RdA_Motif-256x.svg" alt="" style="background-size: 20%; margin: 10px; float:left">
 
             <div class="nav-header">
                 <div class="nav-title">
