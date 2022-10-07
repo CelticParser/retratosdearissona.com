@@ -608,7 +608,8 @@ form {
 .u-max-full-width {
   max-width: 100%;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  }
 
 .u-pull-right {
   float: right; }
@@ -812,7 +813,7 @@ hr {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center;
+  /* text-align: center; */
   }
 
 .end-xs {
@@ -829,7 +830,8 @@ hr {
 .middle-xs {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  /* align-items: center; */
+  }
 
 .bottom-xs {
   -webkit-box-align: end;
@@ -936,8 +938,9 @@ hr {
     max-width: 75%; }
   .col-sm-10 {
     -ms-flex-preferred-size: 83.33333333%;
-    flex-basis: 83.33333333%;
-    max-width: 83.33333333%; }
+    /* flex-basis: 83.33333333%; */
+    max-width: 83.33333333%;
+    }
   .col-sm-11 {
     -ms-flex-preferred-size: 91.66666667%;
     flex-basis: 91.66666667%;

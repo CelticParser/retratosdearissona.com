@@ -47,6 +47,43 @@
         .ol-discription{text-align:justify}
         .page-title{text-align:center;font-size:1.5em;font-style:italic;margin:0 2em 0 2em}
         .sub-title{font-size:.75em;line-height:3em}
+
+        /* ---- grid ---- */
+
+        .grid {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        
+        /* clearfix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        /* ---- grid-item ---- */
+        
+        .grid-item {
+            width: 225px;
+            height: 118px;
+            float: left;
+            border: 1px solid rgb(173, 173, 173);
+        }
+
+        .grid-item--gigante {
+            width: 400px;
+            height: 209px;
+            z-index: 2; /* above other items */
+        }
+        
+        .grid-item--width2 { width: 225px; height: 339px}
+
+        .grid-item--width3 { width: 225px; height: 150px}
+
+
+        /* ----- Media Q -- */
+
         @media (max-width:600px){
             .page-title{text-align:center;font-style:italic;margin:0 1em 0 1em}
             .nav>.nav-btn{display:inline-block;position:absolute;right:0;top:0}
@@ -60,8 +97,8 @@
     </style>
 
     <!-- Site-wide Styles -->
-    <link rel="stylesheet" href="css/skeleton-flexbox.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="/css/skeleton-flexbox.css">
+    <link rel="stylesheet" href="/css/custom.css">
 
     <!-- Web and Application Icons 
         SEE: https://realfavicongenerator.net/ 
@@ -84,8 +121,8 @@
     <meta property="og:site_name" content="Retratos de Arissona" />
     <meta property="og:url" content="https://retratosdearissona.com">
     <!-- og:image structured properties -->
-    <meta property="og:image" content="https://ik.imagekit.io/retratosdearissona/tr:w-720/img/Winded-at-Seven-Sacred-Pools.jpg">
-    <meta property="og:image:secure_url" content="https://ik.imagekit.io/retratosdearissona/tr:w-720/img/Winded-at-Seven-Sacred-Pools.jpg" />
+    <meta property="og:image" content="https://ik.imagekit.io/retratosdearissona/tr:w-720/img/Grey-Whiskers-Butte.jpg">
+    <meta property="og:image:secure_url" content="https://ik.imagekit.io/retratosdearissona/tr:w-720/img/Grey-Whiskers-Butte.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="720" />
     <meta property="og:image:height" content="1083" />
@@ -212,7 +249,7 @@
           "@type"   : "Place",
           "name"    : "Soldiers Pass, Sedona, Arizona, USA"
         },
-        "contentUrl": "https://ik.imagekit.io/retratosdearissona/tr:w-2800,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
+        "contentUrl": "https://ik.imagekit.io/retratosdearissona/tr:w-2800,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
         "copyrightHolder": {
             "@type" : "Person",
             "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
@@ -232,10 +269,10 @@
             "black and white"
         ],
         "image": [
-            "https://ik.imagekit.io/retratosdearissona/tr:w-2800,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
-            "https://ik.imagekit.io/retratosdearissona/tr:ar-1-1,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
-            "https://ik.imagekit.io/retratosdearissona/tr:ar-4-3,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg",
-            "https://ik.imagekit.io/retratosdearissona/tr:ar-16-9,h-1400,,cm-pad_resize,bg-0E0E0E,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg"
+            "https://ik.imagekit.io/retratosdearissona/tr:w-2800,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-1-1,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-4-3,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-16-9,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg"
         ],
         "license"           : "https://retratosdearissona.com/about/licensing",
         "mainEntityOfPage"  : "https://retratosdearizona.com/",
@@ -268,13 +305,14 @@
         <div class="nav">
             <input type="checkbox" id="nav-check">
 
-            <img id="logo" src="img/svg/RdA_Motif-256x.svg" alt="" style="background-size: 20%; margin: 10px; float:left">
+            <img id="logo" src="/img/svg/RdA_Motif-256x.svg" alt="" style="background-size: 20%; margin: 10px; float:left">
 
             <div class="nav-header">
                 <div class="nav-title">
                     Retratos de Arissona
                 </div>
             </div>
+
             <div class="nav-btn">
                 <label for="nav-check">
                     <span></span>
@@ -297,92 +335,55 @@
 
         <hr style="margin-top: 10px;">
 
-        <h2 class="row middle-xs center-xs">Coming Soon</h2>
+        <h2 class="row middle-xs center-xs">Limited Edition</h2>
         <h2 class="page-title">
-            A portraiture of Arizonas&apos; people, places, wildlife, and things <br>that make it unique.
+            Gicleé Prints
             <br>
-            <!-- You have an apostrophe in your name Kelly! Time to start getting in good habits by using the unicode in HTML (more for security reasons) 
-                SEE: https://medium.com/@eokinch/unicode-characters-in-html-css-a55c77fd3570#:~:text=For%20those%20who%20don't,cuts%20down%20on%20load%20time. 
-            -->
             <span class="sub-title">by photographer Jason Robert O&apos;Kennedy</span>
         </h2>
 
         <hr>
 
-        <section style="padding-top: 3em;">
-            <ol>
-                <li class="row  center-xs ol-preview"
-                    role="article">
-                    <figure class="col-xs-12
-                    col-sm-8
-                    col-md-4
-                    col-lg-4"
-                        style="aspect-ratio: 1217.32/1832.08; width: 100%; object-fit: contain" > <!-- NOTE: Use 12 8 7 7 for landscape & 12 8 6 6 for Portrait -->
-                    <picture>
-                        <!-- Im using imageKit.io for an image CDN delivery network -- its just easier this way LOL I can esplain more l8r -->
-                        <source media="(min-width: 75em)"
-                            data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-1400,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
-                        <source media="(min-width: 64em)"
-                            data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-1200,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
-                        <source media="(min-width: 48em)"
-                            data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-1000,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
-                        <source media="(min-width: 34em)"
-                            data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-720,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
-                        <source media="(max-width: 28em)"
-                            data-srcset="https://ik.imagekit.io/retratosdearissona/tr:w-520,e-usm-2-2-0.8-0.024/img/Winded-at-Seven-Sacred-Pools.jpg">
-                        <img data-src="https://ik.imagekit.io/retratosdearissona/img/Winded-at-Seven-Sacred-Pools.jpg"
-                            alt="A Pinyon tree set in Coconino Sandstone worn by wind near Soldiers Pass, Sedona, Arizona" 
-                            class="u-max-full-width lazy">
-                    </picture>
+        <section style="margin-top: 2em;">
 
-                    <!-- For good UX (User-Experience, its a good idea to let your audience know whenever a link opens a new tab or links to another webpage using an icon after the link. Here, I like to open a new tab to the page link for purchasing a print
-                    SEE: https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/ -->
-                    <figcaption style="font-size: .6em;margin: 0 0.4em 2em 0.4em;">
-                        <a href="https://TODO: Create_and_Link_to_print_page_for_this_image" style="font-style: italic;font-weight: bold;" target="_blank">Winded Pinìon at Soldiers Pass:</a> Pinyon pine is widely distributed pine that grows in the Intermountain region of Arizona. Growth is very slow and trees with diameters of 4 to 6 inches can be several hundred years old.
-                    </figcaption>
+            <div class="row center-xs">
 
-                </figure>
-                    </figure>
+                <div class="col-xs-12 col-sm-10" style="width: 100%; object-fit: contain" >
+                    <p style="text-align: justify; text-justify: auto;">
+                        Each print is produced using Red River Palo Duro Baryta Fiber 300 known for its close similarity to the discontinued Oriental New Seagull G, which was a favorite of Ansel Adams. This 100% cotton-rag is an archival material that is FOGRA Certified ISO 9706 (paper aging standards) while still offering all of the rich tonality, depth, and feel of a traditional wet darkroom fiber paper. It has a lightly textured semigloss surface, which adds depth and an elegant reflectivity to the finished print. 
+                    </p>
+                    <p style="text-align: justify; text-justify: auto;">
+                        The editions are hand-signed by Jason using a 2H pencil as well as titled, numbered and is <a href="">Japanese V-hinged</a> to a white Cotton matboard using rice paper hinges 
+                    </p>
+                </div>
+            </div>
 
-                    <br>
+            <hr>
 
-                    <section class="col-xs-12
-                        col-sm-12
-                        col-md-8
-                        col-lg-8">
-                        
-                            <h2 style="text-align: center;">
-                                Arissona
-                            </h2>
-                            <p style="text-align: justify; text-justify: auto; padding: 1em;">
-                                The area that is now southern Arizona & northern Mexico was known by the Spanish as the Pimería Alta, or Upper Pima Country, named after the natives of the area whom the Spanish called Pima.
-                                <!-- //TODO: using <br> to separate paragraphs is a BAD practice -- I only us it when I am desinging and I will correct it later LOL -->
-                                <br><br> 
-                                In 1737, a report by the Spanish/Basque Explorer, Captain Juan Bautista de Anza (father of the Anza Trail) mentioned that a slab of silver weighing more than 2,500 pounds was discovered in Pimería Alta, <q>"…between the Guevavi Mission and the ranchería called Arissona (entre: la Miss.n de Guebabi, y la ranchería del Arissona<a href="#ref01" style="text-decoration: none;font-weight: bolder;">&nbsp;¹&nbsp;</a>)."</q>
-                                <br><br>
-                                Shortly prior to the discovery between 1734 and 1736, Bernardo de Urrea, a native Mexican of Basque heritage, the Governor and Captain General of the Provinces of Sonora and Sinaloa, established the ranchería, south of the present-day international border in México — about forty miles southwest of Tumacácori . He named it Ranchería de Arissona (Baq.Eus. Ranch of “the Good Oak Tree”).
-                                <br><br>
-                                Because of fascination and romance of silver, the ranchería soon quickly became a place of note attracting Europeans to colonize the area. Upon arrival to the region, eager would-be miners would ask the locals, “where are the planchas de plata” (Sp. silver plates) — a common response was to point and reply, “…north of the ranchería, Arissona.”
-                                <br><br>
-                                Quickly, Arizona, a corruption of the Basque word Arissona, became synonymous with the region for it's bountiful silver bolas y planchas (Sp. balls & plates).
-                                <br><br>
-                                <b>Arizona Today</b>
-                                is known for its desert climate, with very hot summers and mild winters. But most are unaware to how much more Arizona has to offer; Northern Arizona features forests of Ponderosa Pine — the largest single-stand in the world, Douglas fir, spruce trees, and Aspen brought by German settlers; the Colorado Plateau; mountain ranges (such as the San Francisco Mountains, Arizona’s highest); as well as large, deep canyons, with much more moderate summer temperatures and significant winter snowfalls. There are ski resorts in the areas of Flagstaff, Alpine, and Tucson. In addition to the internationally known Grand Canyon National Park, which is one of the world's seven natural wonders, there are six national forests — Tonto N.F., the country’s largest, three national parks, and twenty-two national monuments — the most in the U.S.
-                            </p>
+            <div class="row center-xs">
 
-                            <p style="text-align: left; text-justify: auto; padding: 1em;"">
-                                <b>REFERENCES:</b>
-                                <br>
-                                <b id="ref01">[1]:</b> Garate, Donald T. <cite>"Arizona-Never Arizonac"</cite>
-                            </p>
-                        
-                    </section>
+                <div class="col-xs-12 col-sm-10" style="width: 100%; object-fit: contain" >
+                    <div class="grid">
+                        <div class="grid-item"></div>
+                        <div class="grid-item grid-item--width2"></div>
+                        <div class="grid-item grid-item--width3"></div>
+                        <div class="grid-item grid-item"></div>
+                        <div class="grid-item grid-item--width3"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item grid-item--width3"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item grid-item--width2"></div>
+                        <div class="grid-item grid-item--width2"></div>
+                        <div class="grid-item grid-item--width3"></div>
 
-                </li>
 
-            </ol>           
+                    </div>
+                </div>
+            </div>
 
         </section>
+
 
         <!-- //TODO: Stylize the icon -->
         <div class="back-to-top-wrapper">
@@ -410,9 +411,27 @@
         });
     </script>
 
-    <!-- I use Googles FireBase Web Hosting. Since the hits are low, it's basically free and probably the most reliable solution out there
-        SEE: https://firebase.google.com/products/hosting 
-    -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        var grid = document.querySelector('.grid');
+        var msnry = new Masonry( grid, {
+        // options
+        itemSelector: '.grid-item',
+        isFitWidth: true,
+        stagger: 30
+        });
+        grid.addEventListener( 'click', function( event ) {
+            // don't proceed if item was not clicked on
+            if ( !matchesSelector( event.target, '.grid-item' ) ) {
+              return;
+            }
+            // change size of item via class
+            event.target.classList.toggle('grid-item--gigante');
+            // trigger layout
+            msnry.layout();
+          });
+    </script>
+
     <script type="module">
         // Import ONLY! the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
