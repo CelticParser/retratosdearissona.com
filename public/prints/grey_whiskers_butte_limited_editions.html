@@ -136,25 +136,41 @@
         "inLanguage": "en-US"
     }
 </script>
-<!-- CREATIVEWORK SCHEMA TYPE No1
-		 NOTE: Only use one for each image.
---------------------------------------- -->
+<!-- VisualArtwork SCHEMA TYPE
+------------------------------ -->
 <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type"   : "CreativeWork",
-      "@id"     : "https://retratosdearissona.com#greywhiskersbutte",
-      "audience": "Art Collector",
-      "creator": {
-        "@type" : "Person",
-        "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
-      },
+      "@context"    : "https://schema.org",
+      "@type"       : "VisualArtwork",
+      "sameAs"      : "https://www.instagram.com/p/CczfejMACZc/"
+      "name"        : "Grey Whiskers Butte",
+      "dateCreated" : 2022",
+      "artform"     : "print",
+      "artEdition"  : "20",
       "image": [{
         "@type" : "Photograph",
         "@id"   : "https://retratosdearissona.com#greywhiskersbutte"
       }],
+      "description" : "An artistic black and white limited edition print of Grey Whiskers Butte at sunrise located in Monument Valley, Arizona photographed by Jason Robert O'Kennedy",
       "mainEntityOfPage": "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
-      "isFamilyFriendly": true
+      "creator": {
+        "@type" : "Person",
+        "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+      },
+      "width": [
+        {
+          "@type"   : "Distance",
+          "name"    : "20 inches"
+        }
+      ],
+      "height": [
+        {
+          "@type"   : "Distance",
+          "name"    : "10 1/4 inches"
+        }
+      ],
+      "artMedium"       : "Gicleé",
+      "artworkSurface"  : "paper"
     }
 </script>
 <!-- IMAGEOBJECT SCHEMA TYPE
@@ -214,6 +230,64 @@
             "https://www.pinterest.com/jasonrobertokennedy/",
             "https://www.behance.net/JasonRobertOKennedy"
         ]
+    }
+</script>
+<!-- Product with an offer and shipping details
+    -------------------------------------------- -->
+<script type="application/ld+json">
+    {
+        "@context"  : "https://schema.org/",
+        "@type"     : "Product",
+        "sku"       : "GreyWhiskersButte_20L",
+        "title"     : "Grey Whiskers Butte 10x20 Limited Edition Print",
+        "size"      : "10x20 in",
+        "image": [
+            "https://ik.imagekit.io/retratosdearissona/tr:w-2800,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-1-1,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-4-3,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-16-9,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg"
+        ],
+        "name"          : "Grey Whiskers Butte",
+        "description"   : "An artistic black and white 10x20 inch limited edition print (1 of 20) mounted on 20x24 inch matboard of Grey Whiskers Butte during sunrise located in Monument Valley, Arizona - Photographed by Jason Robert O'Kennedy",
+        "brand": {
+            "@type": "Brand",
+            "name": "Jason Robert O'kennedy"
+        },
+        "offers": {
+            "@type"         : "Offer",
+            "url"           : "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
+            "availability"  : "https://schema.org/LimitedAvailability",
+            "price"         : "635.00",
+            "priceCurrency" : "USD"
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context"  : "https://schema.org/",
+        "@type"     : "Product",
+        "sku"       : "GreyWhiskersButte_30L",
+        "title"     : "Grey Whiskers Butte 16x30 Limited Edition Print",
+        "size"      : "16x30 in",
+        "image": [
+            "https://ik.imagekit.io/retratosdearissona/tr:w-2800,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-1-1,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-4-3,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+            "https://ik.imagekit.io/retratosdearissona/tr:ar-16-9,h-1400,,cm-pad_resize,bg-0E0E0E,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg"
+        ],
+        "name"          : "Grey Whiskers Butte",
+        "description"   : "An artistic black and white 16x30 inch limited edition print (1 of 10) mounted on 2x36 inch matboard of Grey Whiskers Butte during sunrise located in Monument Valley, Arizona - Photographed by Jason Robert O'Kennedy",
+        "brand": {
+            "@type": "Brand",
+            "name": "Jason Robert O'kennedy"
+        },
+        "offers": {
+            "@type"         : "Offer",
+            "url"           : "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
+            "availability"  : "https://schema.org/LimitedAvailability",
+            "price"         : "765.00",
+            "priceCurrency" : "USD"
+        }
     }
 </script>
 
@@ -327,7 +401,7 @@
                             </p>
                 
                             <button class="snipcart-add-item u-pull-right"
-                                data-item-id="grey-whiskers-butte-10x20"
+                                data-item-id="GreyWhiskersButte_20L"
                                 data-item-url="/prints/grey_whiskers_butte_limited_editions.html"
                                 data-item-price="635.00"
                                 data-item-description="10x20 inch limited edition gicleé of Grey Whiskers Butte"
@@ -344,7 +418,7 @@
                             </p>
                 
                             <button class="snipcart-add-item u-pull-left"
-                                data-item-id="grey-whiskers-butte-16x30"
+                                data-item-id="GreyWhiskersButte_30L"
                                 data-item-url="/prints/grey_whiskers_butte_limited_editions.html"
                                 data-item-price="765.00"
                                 data-item-description="16x30 inch limited edition gicleé of Grey Whiskers Butte"
