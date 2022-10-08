@@ -81,6 +81,8 @@
 
         .grid-item--width3 { width: 225px; height: 150px}
 
+        .masonThumb { width: 100%; display: inline-block;}
+
 
         /* ----- Media Q -- */
 
@@ -364,7 +366,13 @@
 
                 <div class="col-xs-12 col-sm-10" style="width: 100%; object-fit: contain" >
                     <div class="grid">
-                        <div class="grid-item"></div>
+                        <div class="grid-item">
+                            <a href="/prints/grey_whiskers_butte_limited_editions.html">
+                                <img class="masonThumb"
+                                    src="/img/mason/Grey_Whiskers_butte-400.jpg" 
+                                    alt="Grey Whiskers butte photographed by Jason Robert O'Kennedy">
+                            </a>
+                        </div>
                         <div class="grid-item grid-item--width2"></div>
                         <div class="grid-item grid-item--width3"></div>
                         <div class="grid-item grid-item"></div>
@@ -420,16 +428,6 @@
         isFitWidth: true,
         stagger: 30
         });
-        grid.addEventListener( 'click', function( event ) {
-            // don't proceed if item was not clicked on
-            if ( !matchesSelector( event.target, '.grid-item' ) ) {
-              return;
-            }
-            // change size of item via class
-            event.target.classList.toggle('grid-item--gigante');
-            // trigger layout
-            msnry.layout();
-          });
     </script>
 
     <script type="module">
