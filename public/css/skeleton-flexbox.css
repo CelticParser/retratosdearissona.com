@@ -344,8 +344,9 @@ h3 {
 
 h4 {
   font-size: 2.4rem;
-  line-height: 1.35;
-  letter-spacing: -.08rem; }
+  /* line-height: 1.35; */
+  letter-spacing: -.08rem;
+  }
 
 h5 {
   font-size: 1.8rem;
@@ -612,7 +613,9 @@ form {
   }
 
 .u-pull-right {
-  float: right; }
+  float: right;
+  align-content: baseline;
+  }
 
 .u-pull-left {
   float: left; }

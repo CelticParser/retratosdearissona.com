@@ -30,6 +30,7 @@
     -->
     <style>
         *{box-sizing:border-box;}
+        a, a:visited, a:active {text-decoration: none;border-bottom: 1px #d4d4d4 dotted;}
         a[href^="https://www.instagram.com"]::after{display: none !important;}
         .fade-in-image { animation: fadeIn 5s; }
         .material-symbols-sharp{margin:12px 0 0 -10px;font-variation-settings:FILL 0,wght 100,GRAD 0,opsz 40}
@@ -130,10 +131,43 @@
         "url"           : "https://retratosdearizona.com",
         "name"          : "Retratos de Arissona",
         "description"   : "An artistic view of Arizona's people, places, wildlife, and things that make it unique while connecting with its forgotten history to current events for educating history & conservation.",
+        "publisher": {
+            "@id": "https://retratosdearizona.com/#organization"
+        },
         "copyrightHolder": {
-            "@id": "https://retratosdearizona.com#/schema/person/025c964413724f7fa7b402c283b74ee9"
+            "@id": "https://retratosdearizona.com/#organization"
         },
         "inLanguage": "en-US"
+    }
+</script>
+<!-- ORGANIZATION SCHEMA TYPE 
+------------------------------- -->
+<script type="application/ld+json">
+    {
+        "@context"      : "https://schema.org/",
+        "@type"         : "Organization",
+        "@id"           : "https://retratosdearizona.com/#organization",
+        "name"          : "Jason Robert O'Kennedy",
+        "description"   : "Arizona photographer and curator to narratives of Arizona's colorful history, fascinating culture & endless adventure exclusively displayed with beautiful imagery & captivating videos.",
+        "url"           : "https://retratosdearizona.com",
+        "logo": {
+            "@type"     : "ImageObject",
+            "@id"       : "https://retratosdearizona.com/#logo",
+            "url"       : "https://retratosdearizona.com#logo",
+            "contentUrl": "https://retratosdearissona.com/img/svg/Motif-256px.svg",
+            "width"     : 256,
+            "height"    : 256,
+            "caption"   : "Retratos de Arissona Logo"
+        },
+        "image": {
+            "@id": "https://retratosdearizona.com#logo"
+        },
+        "founder": {
+            "@type" : "Person",
+            "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+        },
+        "email"         : "licensing@RetratosdeArissona.com",
+        "foundingDate"  : "2022-05-25"
     }
 </script>
 <!-- VisualArtwork SCHEMA TYPE
@@ -142,14 +176,14 @@
     {
       "@context"    : "https://schema.org",
       "@type"       : "VisualArtwork",
-      "sameAs"      : "https://www.instagram.com/p/CczfejMACZc/"
-      "name"        : "Grey Whiskers Butte",
-      "dateCreated" : 2022",
+      "sameAs"      : "https://www.instagram.com/p/CczfejMACZc/",
+      "name"        : "Grey Whiskers Butte 20in wide",
+      "dateCreated" : "2022",
       "artform"     : "print",
       "artEdition"  : "20",
       "image": [{
         "@type" : "Photograph",
-        "@id"   : "https://retratosdearissona.com#greywhiskersbutte"
+        "@id"   : "https://retratosdearissona.com/#greywhiskersbutte"
       }],
       "description" : "An artistic black and white limited edition print of Grey Whiskers Butte at sunrise located in Monument Valley, Arizona photographed by Jason Robert O'Kennedy",
       "mainEntityOfPage": "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
@@ -173,6 +207,43 @@
       "artworkSurface"  : "paper"
     }
 </script>
+<!-- VisualArtwork SCHEMA TYPE
+------------------------------ -->
+<script type="application/ld+json">
+    {
+      "@context"    : "https://schema.org",
+      "@type"       : "VisualArtwork",
+      "sameAs"      : "https://www.instagram.com/p/CczfejMACZc/",
+      "name"        : "Grey Whiskers Butte 30in wide",
+      "dateCreated" : "2022",
+      "artform"     : "print",
+      "artEdition"  : "10",
+      "image": [{
+        "@type" : "Photograph",
+        "@id"   : "https://retratosdearissona.com/#greywhiskersbutte"
+      }],
+      "description" : "An artistic black and white limited edition print of Grey Whiskers Butte at sunrise located in Monument Valley, Arizona photographed by Jason Robert O'Kennedy",
+      "mainEntityOfPage": "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
+      "creator": {
+        "@type" : "Person",
+        "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+      },
+      "width": [
+        {
+          "@type"   : "Distance",
+          "name"    : "30 inches"
+        }
+      ],
+      "height": [
+        {
+          "@type"   : "Distance",
+          "name"    : "16 inches"
+        }
+      ],
+      "artMedium"       : "Gicleé",
+      "artworkSurface"  : "paper"
+    }
+</script>
 <!-- IMAGEOBJECT SCHEMA TYPE
 		 NOTE: Only use one for each image.
 ------------------------------------------------------ -->
@@ -180,14 +251,14 @@
     {
         "@context"          : "https://schema.org/",
         "@type"             : "ImageObject",
-        "@id"               : "https://retratosdearissona.com#greywhiskersbutte",
+        "@id"               : "https://retratosdearissona.com/#greywhiskersbutte",
         "abstract"          : "A black and white photo of Grey Whiskers Butte, Monument Valley, Arizona by photographer Jason Robert O'Kennedy",
         "acquireLicensePage": "https://retratosdearissona.com/about/licensing",
         "contentLocation": {
           "@type"   : "Place",
           "name"    : "Grey Whisker Bute, Monument Valley, Arizona, USA"
         },
-        "contentUrl": "https://ik.imagekit.io/retratosdearissona/tr:w-2800,tr:e-sharpen-1/img/Grey-Whiskers-Butte.jpg",
+        "url"       : "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
         "copyrightHolder": {
             "@type" : "Person",
             "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
@@ -218,21 +289,7 @@
         "sameAs"            : "https://www.instagram.com/p/CczfejMACZc/"
     }
 </script>
-<!-- PERSON SCHEMA TYPE 
-------------------------------- -->
-<script type="application/ld+json">
-    {
-        "@type" : "Person",
-        "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
-        "name"  : "Jason Robert O'Kennedy",
-        "sameAs": [
-            "https://www.instagram.com/jason.robert.okennedy/",
-            "https://www.pinterest.com/jasonrobertokennedy/",
-            "https://www.behance.net/JasonRobertOKennedy"
-        ]
-    }
-</script>
-<!-- Product with an offer and shipping details
+<!-- PRODUCT SCHEMA TYPE
     -------------------------------------------- -->
 <script type="application/ld+json">
     {
@@ -250,18 +307,22 @@
         "name"          : "Grey Whiskers Butte",
         "description"   : "An artistic black and white 10x20 inch limited edition print (1 of 20) mounted on 20x24 inch matboard of Grey Whiskers Butte during sunrise located in Monument Valley, Arizona - Photographed by Jason Robert O'Kennedy",
         "brand": {
-            "@type": "Brand",
-            "name": "Jason Robert O'kennedy"
+            "@type" : "Brand",
+            "name"  : "Jason Robert O'kennedy",
+            "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
+
         },
         "offers": {
             "@type"         : "Offer",
             "url"           : "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
             "availability"  : "https://schema.org/LimitedAvailability",
-            "price"         : "635.00",
+            "price"         : "375.00",
             "priceCurrency" : "USD"
         }
     }
 </script>
+<!-- PRODUCT SCHEMA TYPE
+-------------------------------------------- -->
 <script type="application/ld+json">
     {
         "@context"  : "https://schema.org/",
@@ -279,15 +340,30 @@
         "description"   : "An artistic black and white 16x30 inch limited edition print (1 of 10) mounted on 2x36 inch matboard of Grey Whiskers Butte during sunrise located in Monument Valley, Arizona - Photographed by Jason Robert O'Kennedy",
         "brand": {
             "@type": "Brand",
-            "name": "Jason Robert O'kennedy"
+            "name": "Jason Robert O'kennedy",
+            "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9"
         },
         "offers": {
             "@type"         : "Offer",
             "url"           : "https://retratosdearissona.com/prints/grey_whiskers_butte_limited_editions.html",
             "availability"  : "https://schema.org/LimitedAvailability",
-            "price"         : "765.00",
+            "price"         : "465.00",
             "priceCurrency" : "USD"
         }
+    }
+</script>
+<!-- PERSON SCHEMA TYPE 
+------------------------------- -->
+<script type="application/ld+json">
+    {
+        "@type" : "Person",
+        "@id"   : "https://retratosdearizona.com/#/schema/person/025c964413724f7fa7b402c283b74ee9",
+        "name"  : "Jason Robert O'Kennedy",
+        "sameAs": [
+            "https://www.instagram.com/jason.robert.okennedy/",
+            "https://www.pinterest.com/jasonrobertokennedy/",
+            "https://www.behance.net/JasonRobertOKennedy"
+        ]
     }
 </script>
 
@@ -363,9 +439,16 @@
                                 class="u-max-full-width lazy">
                         </picture>
 
-                        <figcaption style="font-size: .6em; margin: 0 0.4em 2em 0.4em;">
+                        <figcaption style="font-size: .6em; margin: 0 0.4em 0 0.4em;">
                             <a href="https://TODO: Create_and_Link_to_BLOG_page_for_this_image" style="font-style: italic;font-weight: bold;" target="_blank">Grey Whiskers Butte:</a> Located in the beautiful Monument Valley, Navajo Tribal Park of Arizona.
                         </figcaption>
+
+                        <a href="#Order">
+                            <button style="margin-bottom: 0;" class="u-pull-right">
+                                Pre-Order &#8628;
+                            </button>
+                        </a>
+
                     </figure>
 
                     <br>
@@ -375,10 +458,10 @@
                         <h3>About Grey Whiskers Butte</h3>
 
                         <p style="text-align: justify; text-justify: auto;">
-                            First publicly shown at the <a href="https://photoplacegallery.com/online-juried-shows/monochrome/gallery/exhibition-gallery">"Monochrome" Exhibit</a> in Middlebury, Vermont at the historic <a href="https://photoplacegallery.com/">PhotoPlace Gallery</a>, "Grey Whiskers Butte" is now available as a limited edition in two sizes exclusively here. Each gicleé is printed solely by Jason during a single production run of 20 and 10 prints to maintain consistent quality across the edition.
+                            First publicly shown at the <a href="https://photoplacegallery.com/online-juried-shows/monochrome/gallery/exhibition-gallery" target="_blank">"Monochrome" Exhibit</a> in Middlebury, Vermont at the historic <a href="https://photoplacegallery.com/"  target="_blank">PhotoPlace Gallery</a>, "Grey Whiskers Butte" is now available as a limited edition in two sizes exclusively here. Each gicleé is printed solely by Jason during a single production run to maintain consistent quality across the edition; the run will be a total limit of 30 prints (20 at 10x20/inch and 10 at 16x30/inch).
                         </p>
                         <p>
-                            The image was created to represent a historically named land feature that is often missed by tourists entering the Monument Valley Tribal Park in Northern Arizona. The story behind the image and Mr. Grey Whisker can be read at <a href="/stories/grey-whiskers-butte-and-a-medicine-man.html">Grey Whiskers Butte and a Medicine Man</a>
+                            The image was created to represent a historically named land feature that is often missed by tourists entering the Monument Valley Tribal Park in Northern Arizona. The story behind the image and Mr. Grey Whisker can be read at <a href="/stories/grey-whiskers-butte-and-a-medicine-man.html">Grey Whiskers Butte and a Medicine Man</a>.
                         </p>
 
                         <hr>
@@ -388,22 +471,32 @@
                         <p style="text-align: justify; text-justify: auto;">
                             Each print is produced using Red River Palo Duro Baryta Fiber 300 known for its close similarity to the discontinued Oriental New Seagull G, which was a favorite of Ansel Adams. This 100% cotton-rag is an archival material that is FOGRA Certified ISO 9706 (paper aging standards) while still offering all of the rich tonality, depth, and feel of a traditional wet darkroom fiber paper. It has a lightly textured semigloss surface, which adds depth and an elegant reflectivity to the finished print. 
                         </p>
-                        <p>
-                            The prints come Japanese V-hinged (top and bottom) to a Crescent Museum RagMat board with a reversed verso opening on the back exposing a mark-of-authenticity stamped on the reverse-side of the print. Each edition piece also comes with a Certificate of Authenticity.
-                            <br>
+                        <p style="text-align: justify; text-justify: auto;">
+                            The prints come mounted using archival-safe mounting corners to a Crescent Museum RagMat board for easy removal without harming the print. The mounting board has a verso opening on the back exposing a mark-of-authenticity which is stamped on the reverse-side of the print. Additionally, double acid-free mats are hinged over the image in accordance with the document, <a href="https://www.loc.gov/preservation/care/SmithBrown.PDF"  target="_blank">"Hinging of Works of Art on Paper"</a> standardized by the <a href="https://www.loc.gov/preservation/"  target="_blank">Library of Congress Preservation Program</a>. Each edition piece  comes with a Certificate of Authenticity as well.
+                        </p>
+                        <p style="text-align: justify; text-justify: auto;">
                             Each certificate is made of premium deckle edged mould made paper with a watermark and fluorescent security fibres. A serialized numbered hologram is added and a second, identically numbered hologram is also applied to the reverse side of the artwork. The combination of certificate and hologram assures that each Certificate of Authenticity relates to one particular piece.
                         </p>
 
+                        <hr>
+
+                        <h3 id="Order" style="margin-bottom: 0rem;">Available as a Pre-Order</h3>
+                        <p>Shipping in January, 2023 - If you have any question, please see the <a href="#">FAQs</a> page or <a href="/contact.html">contact Jason</a> directly.</p>
+
                         <div class="u-pull-right">
                             <p>
-                                <h4>10x20 inch 1 of 20 Edition Print</h4>
-                                Mounted on a 24x20 cotton matboard ready for framing
+                                <h4 style="margin-bottom: 0rem;text-align: right;">20x10 inch 1 of 20 Edition Print</h4>
+                                <p  style="text-align: right;">
+                                    Mounted on a 24x20 cotton matboard & double-matted ready for framing.
+                                    <br>
+                                    &#36;375.00 US
+                                </p>
                             </p>
                 
                             <button class="snipcart-add-item u-pull-right"
                                 data-item-id="GreyWhiskersButte_20L"
                                 data-item-url="/prints/grey_whiskers_butte_limited_editions.html"
-                                data-item-price="635.00"
+                                data-item-price="375.00"
                                 data-item-description="10x20 inch limited edition gicleé of Grey Whiskers Butte"
                                 data-item-image="/img/products/Grey-Whiskers-butte.jpg"
                                 data-item-name="Grey Whiskers Butte 10x20">
@@ -413,14 +506,18 @@
 
                         <div class="u-pull-left">
                             <p>
-                                <h4>16x30 inch 1 of 10 Edition Print</h4>
-                                Mounted on a 24x36 cotton matboard ready for framing
+                                <h4 style="margin-bottom: 0rem;">30x16 inch 1 of 10 Edition Print</h4>
+                                <p  style="text-align: left;">
+                                    Mounted on a 36x24 cotton matboard & double-matted ready for framing.
+                                    <br>
+                                    &#36;465.00 US
+                                </p>
                             </p>
                 
                             <button class="snipcart-add-item u-pull-left"
                                 data-item-id="GreyWhiskersButte_30L"
                                 data-item-url="/prints/grey_whiskers_butte_limited_editions.html"
-                                data-item-price="765.00"
+                                data-item-price="465.00"
                                 data-item-description="16x30 inch limited edition gicleé of Grey Whiskers Butte"
                                 data-item-image="/img/products/Grey-Whiskers-butte.jpg"
                                 data-item-name="Grey Whiskers Butte 16x30">
