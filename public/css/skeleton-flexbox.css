@@ -623,7 +623,7 @@ form {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1;
@@ -980,7 +980,8 @@ hr {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    text-align: start; }
+    text-align: start;
+    }
   .center-sm {
     -webkit-box-pack: center;
     -ms-flex-pack: center;

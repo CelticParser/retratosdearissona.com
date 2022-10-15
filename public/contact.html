@@ -32,6 +32,7 @@
         *{box-sizing:border-box;}
         a, a:visited, a:active {text-decoration: none;border-bottom: 1px #d4d4d4 dotted;}
         a[href^="https://www.instagram.com"]::after{display: none !important;}
+        .borderNone{border-bottom: none;}
         .fade-in-image { animation: fadeIn 5s; }
         .material-symbols-sharp{margin:12px 0 0 -10px;font-variation-settings:FILL 0,wght 100,GRAD 0,opsz 40}
         figure{margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0;margin-inline-end: 0;}
@@ -49,6 +50,7 @@
         .page-title{text-align:center;font-size:1.5em;font-style:italic;margin:0 2em 0 2em}
         .snipcart-checkout{padding-right:1em !important;}
         .sub-title{font-size:.75em;line-height:3em}
+        #logo{background-size: 20%; margin: 10px; float:left}
         @media (max-width:600px){
             .page-title{text-align:center;font-style:italic;margin:0 1em 0 1em}
             .nav>.nav-btn{display:inline-block;position:absolute;right:0;top:0}
@@ -270,10 +272,10 @@
         <div class="nav">
             <input type="checkbox" id="nav-check">
 
-            <img id="logo" src="/img/svg/RdA_Motif-256x.svg" alt="" style="background-size: 20%; margin: 10px; float:left">
+            <img id="logo" src="/img/svg/RdA_Motif-256x.svg" alt="Logo representing Retratos de Arissona">
 
             <div class="nav-header">
-                <a style="border-bottom: none;" class="nav-title" href="/">
+                <a class="borderNone nav-title" href="/">
                     Retratos de Arissona
                 </a>
             </div>
