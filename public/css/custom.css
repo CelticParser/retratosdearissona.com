@@ -91,3 +91,7 @@ img:not([src]) {
     padding: 0.25rem;
     transition: transform 80ms ease-in;
   }
+
+  .snipcart-item-line__media--small {
+    height: 164px !important;
+}
